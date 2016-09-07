@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Excercise02_01</string>
+    <string name="meatballs_text">Cloudy with a change of meatballs</string>
+    <string name="carrot_text">Carrots</string>
+    <string name="chicken_text">Chicken</string>
+    <string name="fish_text">Fish</string>
+    <string name="select_text">Select</string>
+</resources>
