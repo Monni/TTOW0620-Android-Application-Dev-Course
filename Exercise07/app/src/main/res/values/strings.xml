@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Exercise07</string>
+    <string name="map_text"><u>Näytä kartalla</u></string>
 </resources>

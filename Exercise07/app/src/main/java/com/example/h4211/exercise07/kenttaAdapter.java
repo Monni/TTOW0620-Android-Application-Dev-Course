@@ -19,6 +19,7 @@ import com.bumptech.glide.Glide;
 
 import java.net.URI;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -91,17 +92,20 @@ public class kenttaAdapter extends RecyclerView.Adapter<kenttaAdapter.ViewHolder
                 @Override
                 public void onClick(View view) {
                     int position = getAdapterPosition();
-                    String name = kenttaList.get(position).kentta;
-                    Toast.makeText(view.getContext(), name, Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(context, kentta_layout.class);
-                    intent.putExtra("kentta", kenttaList.get(position).kentta); // klup tarvii kaikki
-                    startActivity(intent);
+                    Intent intent = new Intent(context, kentta_detail.class);
+                    intent.putExtra("kenttaimage", kenttaList.get(position).kuva);
+                    intent.putExtra("kenttatext", kenttaList.get(position).kentta);
+                    intent.putExtra("osoite", kenttaList.get(position).osoite);
+                    intent.putExtra("puhelin", kenttaList.get(position).puhelin);
+                    intent.putExtra("sahkoposti", kenttaList.get(position).sahkoposti);
+                    intent.putExtra("kuvaus", kenttaList.get(position).kuvaus);
+                    intent.putExtra("lat", kenttaList.get(position).lat);
+                    intent.putExtra("lng", kenttaList.get(position).lng);
+                    intent.putExtra("webbi", kenttaList.get(position).webbi);
+
+                    view.getContext().startActivity(intent);
                 }
             });
         }
     }
-
-
-
-
 }
